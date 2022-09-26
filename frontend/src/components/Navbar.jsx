@@ -40,7 +40,7 @@ const Navbar = ({ sidebar, handleClick, dark, handleDark }) => {
       {!sidebar ? (
         <div className="flex items-center p-4">
           <FaAccusoft size={34} className="text-green-500" />
-          <p className="mx-6 font-semibold  text-black dark:text-white">
+          <p className="mx-6 font-semibold text-2xl  text-black dark:text-white">
             Tasky is Here!
           </p>
         </div>
