@@ -18,35 +18,32 @@ const Navbar = ({ sidebar, handleClick, dark, handleDark }) => {
         />
       ) : (
         // if navbar is open
-        <>
-          <AiOutlineMenuFold
-            size={37}
-            className="cursor-pointer ml-48 text-green-600"
-            style={{ zIndex: 1000 }}
-            onClick={handleClick}
-          />
-          <Sidebar />
-        </>
+
+        <Sidebar handleClick={handleClick} />
       )}
 
       {/* middle icon dark mode*/}
       {dark ? (
-        <RiMoonFill onClick={handleDark} size={24} className="text-green-400" />
+        <RiMoonFill
+          onClick={handleDark}
+          size={24}
+          className="text-green-400 cursor-pointer"
+        />
       ) : (
-        <RiMoonLine onClick={handleDark} size={24} className="text-green-400" />
+        <RiMoonLine
+          onClick={handleDark}
+          size={24}
+          className="text-green-400 cursor-pointer"
+        />
       )}
 
       {/* right side of navbar */}
-      {!sidebar ? (
-        <div className="flex items-center p-4">
-          <FaAccusoft size={34} className="text-green-500" />
-          <p className="mx-6 font-semibold text-2xl  text-black dark:text-white">
-            Tasky is Here!
-          </p>
-        </div>
-      ) : (
-        <FaAccusoft size={37} className="text-green-500 m-4 mr-8" />
-      )}
+      <div className="flex items-center p-4">
+        <FaAccusoft size={34} className="text-green-500" />
+        <p className="ml-4 font-semibold text-2xl  text-black dark:text-white">
+          Tasky
+        </p>
+      </div>
 
       {/* main div close */}
     </div>
