@@ -18,9 +18,10 @@ function App() {
         handleClick={() => setSidebar(!sidebar)}
       />
 
-      <div className="dark:text-white p-8 ">
-        Main App Div - router will go here - need to install router tomorrow
-      </div>
+      {/* main app div */}
+      <main className="p-16 container mx-auto">
+        <div className="bg-green-50 rounded-3xl p-4 h-64">test</div>
+      </main>
     </div>
   );
 }
