@@ -18,7 +18,7 @@ function App() {
         handleClick={() => setSidebar(!sidebar)}
       />
 
-      {/* main app div */}
+      {/* main app div ----testing-----*/}
       <main className="p-16 container mx-auto">
         <div className="bg-green-50 rounded-3xl p-4 h-64">test</div>
       </main>
