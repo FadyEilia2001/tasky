@@ -8,7 +8,10 @@ import { MdCreate } from "react-icons/md";
 
 const Sidebar = ({ handleClick }) => {
   return (
-    <div className="fixed top-0 left-0 p-4 h-screen w-64 m-0 bg-white dark:bg-gray-800 dark:text-white">
+    <div
+      style={{ zIndex: 1000 }}
+      className=" fixed top-0 left-0 p-4 h-screen w-64 m-0 bg-white dark:bg-gray-800 dark:text-white"
+    >
       {/* title and close button div */}
       <div className="">
         <AiOutlineMenuFold
@@ -58,6 +61,10 @@ const Sidebar = ({ handleClick }) => {
           New Task
         </NavLink>
       </div>
+      <button className="bg-green-500 absolute bottom-8 left-8 text-white px-4 text-lg  py-2 hover:bg-green-600 cursor-pointer rounded-lg flex items-center gap-x-4 text-semibold">
+        <MdCreate />
+        Log out - Bye
+      </button>
       {/* main div close */}
     </div>
   );

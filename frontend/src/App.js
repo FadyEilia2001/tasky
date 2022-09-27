@@ -13,7 +13,9 @@ function App() {
   return (
     <Router>
       <div
-        className={`h-screen ${darkMode ? `dark bg-gray-900` : `bg-gray-100`}`}
+        className={`min-h-screen ${
+          darkMode ? `dark bg-gray-900` : `bg-gray-100`
+        }`}
       >
         <Navbar
           sidebar={sidebar}
@@ -25,7 +27,7 @@ function App() {
         />
 
         {/* main app div ----testing-----*/}
-        <main className="px-20 container mx-auto flex items-center justify-center border mt-12 border-red-500">
+        <main className="container mx-auto mt-4">
           <Routes>
             <Route exact path="/" element={<Login />} />
             <Route exact path="/dashboard" element={<Dashboard />} />
