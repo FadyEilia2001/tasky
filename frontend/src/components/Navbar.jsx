@@ -7,7 +7,7 @@ import { RiMoonLine } from "react-icons/ri";
 
 const Navbar = ({ sidebar, handleClick, dark, handleDark }) => {
   return (
-    <div className="p-2 h-24 flex justify-between items-center dark:bg-gray-900">
+    <div className="px-2 py-4 h-16 flex justify-between items-center dark:bg-gray-900">
       {/* left side of navbar that opens and closes - first if navbar is closed */}
       {!sidebar ? (
         <AiOutlineMenuUnfold
