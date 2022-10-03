@@ -9,3 +9,5 @@
 # create controller functions
 
 # install axios
+
+# work on error handeling and status codes
