@@ -3,6 +3,7 @@ const connectDB = require("./db/connectDB");
 const errorHandlerMiddleware = require("./middlewares/errorHandleerMiddleware");
 const notFound = require("./middlewares/notFound");
 require("dotenv").config();
+const shopRouter = require("./routes/tasks");
 
 //routes
 
@@ -12,11 +13,13 @@ const port = process.env.PORT;
 ////// middlewares ///////
 //json middleware
 app.use(express.json());
+//to be able to parse the form data
+app.use(express.urlencoded({ extended: false }));
 //error handler middleware
 app.use(errorHandlerMiddleware);
 
 //routes
-app.get("/", (req, res) => res.send("Hello World!"));
+app.use("/api/v1/tasks", shopRouter);
 
 //not found middleware
 app.use(notFound);
