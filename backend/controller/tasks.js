@@ -31,9 +31,18 @@ const getSingleTask = async (req, res) => {
 };
 
 //req.body
+const createTask = async (req, res) => {};
+
+//req.body
 const updateSingleTask = async (req, res) => {};
 
 //req.params.id
 const deleteSingleTask = async (req, res) => {};
 
-module.exports = { getAllTasks, getSingleTask };
+module.exports = {
+  getAllTasks,
+  getSingleTask,
+  createTask,
+  updateSingleTask,
+  deleteSingleTask,
+};
