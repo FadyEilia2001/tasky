@@ -2,7 +2,6 @@ import React from "react";
 import { MdCreate } from "react-icons/md";
 import Charts from "../components/dashboard/Charts";
 import Overview from "../components/dashboard/Overview";
-import Tasks from "../components/Tasks";
 
 const Dashboard = () => {
   return (
