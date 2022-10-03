@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
-import Tasks from "./pages/Tasks";
+import TasksPage from "./pages/TasksPage";
 import CreateTask from "./pages/CreateTask";
 import { Login } from "./components/Login";
 
@@ -31,7 +31,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Login />} />
             <Route exact path="/dashboard" element={<Dashboard />} />
-            <Route exact path="/Tasks" element={<Tasks />} />
+            <Route exact path="/Tasks" element={<TasksPage />} />
             <Route exact path="/createtask" element={<CreateTask />} />
           </Routes>
         </main>
