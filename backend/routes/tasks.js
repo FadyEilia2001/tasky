@@ -11,7 +11,7 @@ const {
 
 router.get("/", getAllTasks);
 
-router.get("/search", getSingleTask);
+router.get("/:id", getSingleTask);
 
 router.post("/", createTask);
 

@@ -1,9 +1,11 @@
+require("dotenv").config();
+require("express-async-errors");
+
 const express = require("express");
 const connectDB = require("./db/connectDB");
 const notFoundMiddleware = require("./middlewares/not-found");
 const errorHandlerMiddleware = require("./middlewares/error-handler");
-require("dotenv").config();
-require("express-async-errors");
+
 const shopRouter = require("./routes/tasks");
 const authRouter = require("./routes/auth");
 const cors = require("cors");
