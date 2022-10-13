@@ -7,6 +7,7 @@ require("express-async-errors");
 const shopRouter = require("./routes/tasks");
 const authRouter = require("./routes/auth");
 const cors = require("cors");
+const authenticateUsers = require("./middlewares/authentication");
 
 //routes
 
@@ -19,7 +20,7 @@ app.use(express.json());
 //to be able to parse the form data
 
 //routes
-app.use("/api/v1/tasks", shopRouter);
+app.use("/api/v1/tasks", authenticateUsers, shopRouter);
 app.use("/api/v1/auth", authRouter);
 app.use(errorHandlerMiddleware);
 app.use(notFoundMiddleware);
