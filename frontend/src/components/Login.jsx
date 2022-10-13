@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Login = () => {
   return (
-    <div className="px-8 w-72 mx-auto  py-10 border flex flex-col items-center justify-center shadow-lg rounded-xl mt-24 dark:bg-gray-700">
+    <div className="px-8 w-72 md:w-76 lg:w-76 xl:w-76 mx-auto  py-10 border flex flex-col items-center justify-center shadow-lg rounded-xl mt-24 dark:bg-gray-700">
       <div className="mb-8">
         <h2 className="font-bold text-green-500">Come on in!</h2>
       </div>
@@ -24,6 +24,15 @@ export const Login = () => {
         >
           <Link to="/dashboard">Submit</Link>
         </button>
+
+        <p className="mt-4 text-sm px-4">
+          don't have an account?
+          <Link to="/register">
+            <span className="text-blue-400 block mt-2 hover:underline">
+              Register Here
+            </span>
+          </Link>
+        </p>
       </form>
     </div>
   );
