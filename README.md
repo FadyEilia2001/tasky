@@ -13,3 +13,8 @@
 # Save Theme to local storage
 
 # prob can add theme to Context!!!!
+
+
+Next Steps
+
+- add authentication middleware

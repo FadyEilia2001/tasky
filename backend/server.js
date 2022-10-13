@@ -1,32 +1,34 @@
 const express = require("express");
 const connectDB = require("./db/connectDB");
-const errorHandlerMiddleware = require("./middlewares/errorHandleerMiddleware");
-const notFound = require("./middlewares/notFound");
+const notFoundMiddleware = require("./middlewares/not-found");
+const errorHandlerMiddleware = require("./middlewares/error-handler");
 require("dotenv").config();
+require("express-async-errors");
 const shopRouter = require("./routes/tasks");
+const authRouter = require("./routes/auth");
 const cors = require("cors");
 
 //routes
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 
 ////// middlewares ///////
 //json middleware
 app.use(express.json());
 //to be able to parse the form data
-app.use(express.urlencoded({ extended: false }));
-//error handler middleware
-app.use(errorHandlerMiddleware);
 
 //routes
 app.use("/api/v1/tasks", shopRouter);
+app.use("/api/v1/auth", authRouter);
+app.use(errorHandlerMiddleware);
+app.use(notFoundMiddleware);
+
+app.use(express.urlencoded({ extended: false }));
+//error handler middleware
 
 //cors
 app.use(cors({ origin: "*" }));
-
-//not found middleware
-app.use(notFound);
 
 const start = async () => {
   try {
