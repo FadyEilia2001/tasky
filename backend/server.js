@@ -16,6 +16,9 @@ const authenticateUsers = require("./middlewares/authentication");
 const app = express();
 const port = process.env.PORT || 5000;
 
+//cors
+app.use(cors());
+
 ////// middlewares ///////
 //json middleware
 app.use(express.json());
@@ -29,9 +32,6 @@ app.use(notFoundMiddleware);
 
 app.use(express.urlencoded({ extended: false }));
 //error handler middleware
-
-//cors
-app.use(cors({ origin: "*" }));
 
 const start = async () => {
   try {

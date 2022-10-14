@@ -1,9 +1,10 @@
 import React from "react";
+import RegForm from "../components/RegForm";
 
 const Register = () => {
   return (
     <div>
-      <h2>Register</h2>
+      <RegForm />
     </div>
   );
 };

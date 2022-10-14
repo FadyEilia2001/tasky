@@ -1,17 +1,10 @@
 # tasky
 
-# Tomorrow:
+completed:
 
-# install cores
+create user
+Save token to local storage
 
-# create routes
+# Next step
 
-# create controller functions
-
-# install axios
-
-# Save Theme to local storage
-
-# prob can add theme to Context!!!!
-
-
+Figure out a way to redirect user to the dashboard after register
