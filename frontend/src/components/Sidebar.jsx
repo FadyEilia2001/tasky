@@ -16,7 +16,7 @@ const Sidebar = ({ handleClick }) => {
       <div className="">
         <AiOutlineMenuFold
           size={37}
-          className="cursor-pointer ml-48 text-green-600 absolute mt-3"
+          className="cursor-pointer ml-48 hover:text-green-900 ease-in-out text-green-600 absolute mt-3"
           style={{ zIndex: 1000 }}
           onClick={handleClick}
         />
@@ -55,7 +55,7 @@ const Sidebar = ({ handleClick }) => {
         {/* Create a task link */}
         <NavLink
           to="/createtask"
-          className="flex items-center gap-x-2 leading-6 text-lg hover:text-green-600 text-green-600 "
+          className="flex hover:text-black items-center gap-x-2 leading-6 text-lg ease-in-out text-green-600 "
         >
           <MdCreate />
           New Task

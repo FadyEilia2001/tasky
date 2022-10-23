@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import TasksPage from "./pages/TasksPage";
 import CreateTask from "./pages/CreateTask";
-import { Login } from "./components/Login";
+import { Login } from "./pages/Login";
 import Register from "./pages/Register";
 
 function App() {
