@@ -25,7 +25,7 @@ const Sidebar = ({ handleClick }) => {
           {" "}
           {/* title and name */}
           <FaAccusoft size={37} className="text-green-400" />
-          <p className="ml-10 text-gray-900 tracking-widest font-bold dark:text-white">
+          <p className="ml-10 text-gray-900 tracking-widest font-bold dark:text-white z-10">
             TASKY
           </p>
         </div>
@@ -55,7 +55,7 @@ const Sidebar = ({ handleClick }) => {
         {/* Create a task link */}
         <NavLink
           to="/createtask"
-          className="flex hover:text-black items-center gap-x-2 leading-6 text-lg ease-in-out text-green-600 "
+          className="flex hover:text-black items-center gap-x-2 leading-6 text-lg ease text-green-600 "
         >
           <MdCreate />
           New Task

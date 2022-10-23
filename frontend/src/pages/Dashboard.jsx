@@ -11,9 +11,8 @@ const Dashboard = () => {
         Create Task
       </button>
 
-      <div className="w-full md:p-12 lg:p-12 xl:p-12">
+      <div className="w-full md:p-12 lg:p-12 xl:p-12 mt-12">
         <Overview />
-        <Charts />
       </div>
 
       {/* <div className="md:w-1/2 lg:w-1/2 xl:w-1/2 2xl:w-1/2 w-full lg:mt-5 xl:mt-5 ">

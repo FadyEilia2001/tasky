@@ -11,7 +11,6 @@ const RegForm = () => {
   const [password, setPassword] = useState("");
   const [confirmPwd, setConfirmPwd] = useState("");
 
-  const [token, setToken] = useState("");
   const [error, setError] = useState("");
 
   const { isLoggedIn, logUser, saveUserName } = useContext(AppContext);
@@ -36,8 +35,10 @@ const RegForm = () => {
       );
 
       if (response.status > 200 && response.status < 300) {
-        setToken(`Bearer ${response.data.token}`);
-        localStorage.setItem("accessToken", JSON.stringify(token));
+        localStorage.setItem(
+          "accessToken",
+          JSON.stringify(`Bearer ${response.data.token}`)
+        );
         localStorage.setItem("userName", JSON.stringify(name));
         logUser();
 

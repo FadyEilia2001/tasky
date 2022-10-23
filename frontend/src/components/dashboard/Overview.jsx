@@ -16,13 +16,13 @@ const Overview = () => {
         </div>
 
         <div className="flex flex-col items-center mb-4">
-          <p className="mb-3 font-semibold tracking-widest">This week</p>
+          <p className="mb-3 font-semibold tracking-widest">Completed</p>
           <div className="border-2 border-green-500 rounded-full p-4 w-48  flex flex-col items-center">
-            <p className="font-bold">9</p>
+            <p className="font-bold">12</p>
           </div>
         </div>
 
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center mb-10">
           <p className="mb-3 font-semibold tracking-widest">pending</p>
           <div className="border-2 border-green-500 rounded-full p-4 w-48  flex flex-col items-center">
             <p className="font-bold">12</p>

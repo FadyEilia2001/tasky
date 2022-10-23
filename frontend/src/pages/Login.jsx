@@ -10,7 +10,7 @@ export const Login = () => {
   const { logUser, saveUserName } = useContext(AppContext);
 
   const [error, setError] = useState("");
-  const [token, setToken] = useState("");
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -28,12 +28,17 @@ export const Login = () => {
         }
       );
 
-      console.log(response);
+      console.log(response.data.token);
 
       if (response.status > 200 && response.status < 300) {
-        setToken(`Bearer ${response.data.token}`);
-        localStorage.setItem("accessToken", JSON.stringify(token));
-        localStorage.setItem("userName", JSON.stringify(formData.name));
+        localStorage.setItem(
+          "accessToken",
+          JSON.stringify(`Bearer ${response.data.token}`)
+        );
+        localStorage.setItem(
+          "userName",
+          JSON.stringify(response.data.user.name)
+        );
         logUser();
 
         saveUserName(response.data.user.name);

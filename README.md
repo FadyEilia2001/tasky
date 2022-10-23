@@ -1,10 +1,9 @@
 # tasky
 
-completed:
+Next steps:
 
-create user
-Save token to local storage
+step 1 - Complete the create task page - so i can test the other two pages
 
-# Next step
+Step 2 - Complete the tasks page
 
-Figure out a way to redirect user to the dashboard after register
+Step 3 - Complete the dashboard page
